@@ -1,0 +1,121 @@
+button:focus {
+	outline: none;
+}
+.hidden {
+	position: absolute;
+	overflow: hidden;
+	width: 0;
+	height: 0;
+	pointer-events: none;
+}
+/* Icons */
+.icon {
+	display: block;
+	width: 1.5em;
+	height: 1.5em;
+	margin: 0 auto;
+	background-image: url('../img/cross-close.svg');
+	background-position: center center;
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+.block-projects {
+	position: relative;
+	display: block;
+}
+.grid {
+	position: relative;
+	width: 100%;
+	height: auto;
+	display: grid;
+	grid-template-columns: repeat(3, 28%);
+	justify-content: space-between;
+	overflow: hidden;
+}
+.product {
+	display: block;
+	width: 100%;
+	padding-top: 100%;
+	position: relative;
+	cursor: pointer;
+}
+.product__img {
+	width: 100%;
+	margin: 0 auto;
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 50%;
+	pointer-events: none;
+	transform: translate3d(-50%,0,0);
+}
+.product__title {
+	position: relative;
+	text-align: center;
+}
+.product__subtitle, .product__description, .product__work {
+	opacity: 0;
+	position: absolute;
+}
+.details {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	bottom: 0;
+	left: 0;
+	padding: 40vh 0 10vh 10vw;
+	z-index: 2;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	pointer-events: none;
+}
+.details--open {
+	pointer-events: auto;
+	overflow-y: scroll;
+	-webkit-overflow-scrolling: touch;
+}
+.details > * {
+	position: relative;
+	opacity: 0;
+}
+.details__bg {
+	width: 100%;
+	position: fixed;
+	left: 0;
+}
+.details__bg--up {
+	top: 0;
+	height: 100vh;
+}
+.details__img {
+	position: absolute;
+	top: 25vh;
+	right: 10vw;
+	height: 30vw;
+}
+.details__bg,
+.details__img {
+	transform-origin: 0 0;
+}
+.details__title {
+	margin: -1.5em 0 2em;
+}
+.details__description {
+	width: calc(100% + 10vw);
+    left: -10vw;
+    padding: 2em 50% 10vh 10vw;
+}
+.details__close {
+	position: fixed;
+	top: 0;
+	right: 0;
+	width: 40px;
+	height: 40px;
+	border: 0;
+	background: none;
+	margin: 6em 2em;
+	cursor: pointer;
+	font-size: 0.85em;
+	padding: 0;
+}

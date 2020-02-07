@@ -1,0 +1,29 @@
+.tilter {
+	display: block;
+	position: relative;
+	width: 100%;
+	height: auto;
+	flex: none;
+	perspective: 1000px;
+}
+.tilter * {
+	pointer-events: none;
+}
+.tilter__figure,
+.tilter__image {
+	margin: 0;
+	width: 100%;
+	height: 100%;
+	display: block;
+}
+.smooth .tilter__figure, .smooth .tilter__caption {
+	transition: transform .5s ease-out;
+}
+.tilter__figure {
+	position: relative;
+}
+.tilter__caption {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+}
