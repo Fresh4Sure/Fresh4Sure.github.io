@@ -1,0 +1,413 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<title>Fresh4Sure - Food Wastage, Bbye</title>
+
+		<meta name="description"  content="Website of Fresh4Sure." />
+		<meta name="author" content="Noone" />
+
+		<!-- loading -->
+		<script src="js/loader.js"></script>
+		<script>
+
+			/* au chargement du DOM .all-loaded est ajoutée au body */
+			window.addEventListener('DOMContentLoaded', () => {
+				document.body.classList.add('all-loaded');
+			});
+
+			imgLoader(['../img/home/presentation-anim.gif'], 1000).then(() => {
+
+				/* code à exécuter quand toutes les promesses sont résolues */
+				document.querySelector('header').classList.add('hide');
+				document.querySelector('section#home_section').classList.remove('loading');
+				document.body.classList.remove('loading-overflow');
+				document.querySelector('.buttons-anchor').classList.add('arrival');
+				setTimeout(() => {
+					document.querySelector('#icon-hamburger').classList.add('arrival');
+				}, 1000);
+				setTimeout(() => {
+					document.querySelector('.buttons-anchor').classList.remove('arrival');
+					document.querySelector('#icon-hamburger').classList.remove('arrival');
+				}, 2100);
+
+			});
+
+		</script>
+
+		<!-- FAVICON -->
+		<link rel="shortcut icon" href="favicon.ico">
+		<link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
+		<link rel="manifest" href="">
+		<link rel="mask-icon" href="" color="#000000">
+		<meta name="msapplication-TileColor" content="#ffffff">
+		<meta name="theme-color" content="#ffffff">
+		<!-- SHARE ON SOCIAL MEDIAS -->
+        <meta property="og:title" content="Fresh4Sure – agence digitale" />
+        <meta property="og:type" content="article" />
+        <meta property="og:url" content="" />
+		<meta property="og:image" content="" />
+        <!-- Twitter Card meta -->
+        <meta name="twitter:card" content="">
+        <meta name="twitter:title"  content="Fresh4Sure – digital agency">
+        <meta name="twitter:description"  content="Web development, marketing and design agency based in Martigny and Lausanne.">
+        <meta name="twitter:url" content=" " />
+        <meta name="twitter:domain" content=" " />
+        <meta name="twitter:creator" content="@jonas_reymondin">
+
+		<!-- IE WARNING -->
+		<link rel="stylesheet" href="#" id="ieonly">
+
+		<script>
+			if(/Trident/.test(window.navigator.userAgent)){
+				document.getElementById('ieonly').href = 'css/ieonly.css';
+				console.log('is IE', window.navigator.userAgent);
+			}
+		</script>
+
+		<!-- LogoHoverEffect -->
+		<link rel="stylesheet" type="text/css" href="css/logo-hover_component.css" />
+		<!-- MorphingBackgroundShapes -->
+		<link rel="stylesheet" type="text/css" href="css/background-shapes_demo.css" />
+		<!-- ShapeOverlays -->
+		<link rel="stylesheet" type="text/css" href="css/menu-shapes_demo.css" />
+
+		<link rel="stylesheet" type="text/css" href="css/main.min.css" />
+
+		<!-- loading if no script -->
+		<noscript>
+			<style>
+				body {
+					display: block !important;
+					opacity: 1;
+				}
+			</style>
+		</noscript>
+	</head>
+	<body class="demo-6 render loading-overflow light-theme">
+		<div id="wrapper">
+			<header>
+				<div class="loader">
+					<div class="circle bounce1"></div>
+					<div class="circle bounce2"></div>
+					<div class="circle bounce3"></div>
+				</div>
+			</header>
+			<!-- CUSTOM CURSOR -->
+			<div id="follower">
+				<span id="circle"></span>
+			</div>
+			<!-- MENU -->
+			<!-- <nav>
+				<div id="icon-hamburger">
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
+				<label class="switch">
+					<input type="checkbox">
+					<span class="slider"></span>
+				</label>
+			</nav> -->
+			<div id="icon-hamburger">
+				<span></span>
+				<span></span>
+				<span></span>
+			</div>
+			<label class="switch">
+				<input type="checkbox">
+				<span class="slider"></span>
+			</label>
+			<!-- VERTICAL NAVIGATION -->
+			<aside class="dots-navigation">
+				<a href="#home_section" class="dot active"></a>
+				<a href="#design_section" class="dot"></a>
+				<a href="#web_section" class="dot"></a>
+				<a href="#marketing_section" class="dot"></a>
+			</aside>
+			<!-- ShapeOverlays menu -->
+			<div class="content content--demo-6">
+				<div class="global-menu">
+				<!-- <div class="global-menu__langage">
+						<a id="locale_fr" onclick="setLocale('fr')" class="global-menu__item global-menu__item--demo-6">FR</a>
+						<span class="global-menu__item global-menu__item--demo-6 separator">|</span>
+						<a id="locale_en" onclick="setLocale('en')" class="global-menu__item global-menu__item--demo-6">EN</a>
+						<span class="global-menu__item global-menu__item--demo-6 separator">|</span>
+						<a id="locale_de" onclick="setLocale('de')" class="global-menu__item global-menu__item--demo-6">DE</a>
+					</div> -->
+					<a class="global-menu__item global-menu__item--demo-6 active" href=" /">home</a>
+					<a class="global-menu__item global-menu__item--demo-6" href="projects.html">collaborations</a>
+					<!-- <a class="global-menu__item global-menu__item--demo-6" href="news.html">news</a> -->
+					<a class="global-menu__item global-menu__item--demo-6" href="about.html">about</a>
+					<a class="global-menu__item global-menu__item--demo-6" href="contact.html">contact</a>
+				</div>
+				<svg class="shape-overlays" viewBox="0 0 100 100" preserveAspectRatio="none">
+					<defs>
+						<linearGradient id="gradient1" x1="0%" y1="0%" x2="0%" y2="100%">
+							<stop offset="0%" stop-color="#00FFC8"/>
+							<stop offset="50%"   stop-color="#FFA41B"/>
+							<stop offset="100%"   stop-color="#ED143D"/>
+						</linearGradient>
+						<linearGradient id="gradient2" x1="0%" y1="0%" x2="0%" y2="100%">
+							<stop offset="0%" stop-color="#FFC0CB"/>
+							<stop offset="100%" stop-color="#05F1FF"/>
+						</linearGradient>
+						<linearGradient id="gradient3" x1="0%" y1="0%" x2="0%" y2="100%">
+							<stop offset="0%"   stop-color="#fafafa"/>
+							<stop offset="100%" stop-color="#fff"/>
+						</linearGradient>
+					</defs>
+					<path class="shape-overlays__path"></path>
+					<path class="shape-overlays__path"></path>
+					<path class="shape-overlays__path"></path>
+				</svg>
+			</div>
+			<!-- FORM BOTTOM -->
+			<!-- <div class="navbar-bottom hidden">
+				<div class="icon-close">
+					<span></span>
+					<span></span>
+				</div>
+				<div class="container">
+					<a class="show-services" href="#">display the desired services(<span class="count">0</span>)</a>
+					<div class="form-services">
+						<p><span >Send your selection</span> <span class="icon-check-full"></span> (<span class="count">0</span>) <span >of desired services and we will contact you.</span></p>
+						<div class="list-design_section">
+							<ul class="services" id="list-design_section"></ul>
+						</div>
+						<div class="list-web_section">
+							<ul class="services" id="list-web_section"></ul>
+						</div>
+						<div class="list-marketing_section">
+							<ul class="services" id="list-marketing_section"></ul>
+						</div> -->
+						<!-- <form action=" /en/xhr/sendmail.php" method="post" novalidate id="form-home">
+							<div class="loader">
+								<div class="circle bounce1"></div>
+								<div class="circle bounce2"></div>
+								<div class="circle bounce3"></div>
+							</div>
+							<div class="col1">
+								<span id="form-message" class="input-border">
+									<textarea  type="message" name="message" placeholder="MESSAGE" required tabindex="1"></textarea>
+									<span class="msg-system"></span>
+								</span>
+							</div>
+							<div class="col2">
+								<span id="form-email" class="input-border">
+									<input   type="email" name="email" placeholder="EMAIL" required tabindex="2">
+									<span class="msg-system"></span>
+								</span> -->
+								<!-- Google reCAPTCHA widget -->
+    							<!-- <span id="form-captcha">
+									<div class="g-recaptcha" style="display:none" data-sitekey="6LfZF5AUAAAAAEROf-ns8MCmev9bQ7kjyaZenLc2" data-badge="inline" data-size="invisible" data-callback="setResponse"></div>
+									<input type="hidden" id="captcha-response" name="captcha-response" />
+									<span class="msg-system"></span>
+								</span>
+								<button class="submit" name="submit" type="submit" tabindex="3" >send</button>
+							</div>
+						</form> -->
+					<!-- </div>
+				</div>
+			</div> -->
+			<!-- POPUP INFO ON MAIL SENDING -->
+			<div class="popup-form-status popup-success">
+				<p >Thank you for your email! We will be in touch with you shortly.</p>
+			</div>
+			<div class="popup-form-status popup-error">
+				<p >Email error, please try again.</p>
+			</div>
+			<!-- CONTENT -->
+			<section id="home_section" data-section-name="home" class="loading">
+				<!-- LogoHoverEffect -->
+				<main>
+					<div class="content--c1">
+						<a href="#" class="tilter">
+							<figure class="tilter__figure">
+								<img class="tilter__image" src="img/home/logo_shapes.svg" alt="logo_shapes" />
+								<figcaption class="tilter__caption">
+									<img class="tilter__image text" src="img/home/logo_text1.svg" alt="logo_text" />
+								</figcaption>
+							</figure>
+						</a>
+					</div>
+				</main>
+				<div class="buttons-anchor">
+					<a href="#design_section">product.</a>
+					<a href="#web_section">working.</a>
+					<a href="#marketing_section">cause.</a>
+				</div>
+			</section>
+			<!--BACKGROUND MORPHING SHAPES-->
+			<div class="morph-wrap hidden">
+				<svg class="morph" width="1000" height="700" viewBox="0 0 1400 770">
+					<path id="morph1" d="M 262.9,252.2 C 210.1,338.2 212.6,487.6 288.8,553.9 372.2,626.5 511.2,517.8 620.3,536.3 750.6,558.4 860.3,723 987.3,686.5 1089,657.3 1168,534.7 1173,429.2 1178,313.7 1096,189.1 995.1,130.7 852.1,47.07 658.8,78.95 498.1,119.2 410.7,141.1 322.6,154.8 262.9,252.2 Z"/>
+					<path id="morph2" d="M 262.9,252.2 C 210.1,338.2 212.6,487.6 288.8,553.9 372.2,626.5 511.2,517.8 620.3,536.3 750.6,558.4 860.3,723 987.3,686.5 1089,657.3 1168,534.7 1173,429.2 1178,313.7 1096,189.1 995.1,130.7 852.1,47.07 658.8,78.95 498.1,119.2 410.7,141.1 322.6,154.8 262.9,252.2 Z"/>
+					<path id="morph3" d="M 262.9,252.2 C 210.1,338.2 212.6,487.6 288.8,553.9 372.2,626.5 511.2,517.8 620.3,536.3 750.6,558.4 860.3,723 987.3,686.5 1089,657.3 1168,534.7 1173,429.2 1178,313.7 1096,189.1 995.1,130.7 852.1,47.07 658.8,78.95 498.1,119.2 410.7,141.1 322.6,154.8 262.9,252.2 Z"/>
+					<path id="morph4" d="M 262.9,252.2 C 210.1,338.2 212.6,487.6 288.8,553.9 372.2,626.5 511.2,517.8 620.3,536.3 750.6,558.4 860.3,723 987.3,686.5 1089,657.3 1168,534.7 1173,429.2 1178,313.7 1096,189.1 995.1,130.7 852.1,47.07 658.8,78.95 498.1,119.2 410.7,141.1 322.6,154.8 262.9,252.2 Z"/>
+					<path id="morph5" d="M 262.9,252.2 C 210.1,338.2 212.6,487.6 288.8,553.9 372.2,626.5 511.2,517.8 620.3,536.3 750.6,558.4 860.3,723 987.3,686.5 1089,657.3 1168,534.7 1173,429.2 1178,313.7 1096,189.1 995.1,130.7 852.1,47.07 658.8,78.95 498.1,119.2 410.7,141.1 322.6,154.8 262.9,252.2 Z"/>
+				</svg>
+			</div>
+			<!--COMPUTER FIXED IN CENTER-->
+			<div class="computer hidden">
+				<img src="img/home/macbook-white.png" alt="MacBook Computer Apple">
+				<div id="gif"></div>
+			</div>
+			<!-- CONTENT -->
+			<section id="design_section" data-section-name="design" class="content-wrap">
+				<div class="container">
+					<h1 class="title disable-reveal">product brief
+						<div class="who-take-part">
+							<a href="#" class="radu"><span>IIM</span>
+								<blockquote class="radu">
+									<p >"Fresh4Sure is not just a product but a business model that can institutionalize the complete fruit supply chain process."</p>
+								</blockquote>
+							</a>
+							<a href="#" class="jonas"><span>NIT</span>
+								<blockquote class="jonas">
+									<p >"Fresh4Sure is a good initiative for the society."</p>
+								</blockquote>
+							</a>
+						</div>
+					</h1>
+					<p class="sentence" >Every fruit have a natural layering in the form of wax that helps the fruits from going bad, but as the time progresses, the fruit loses that layer.</br>
+Fresh4Sure imitates that natural layering after extracting a solution from waste fruit extracts which creates a natural and edible layer that helps in increasing the shelf life of the produce by 2-3 times. </br>
+In this way, we are using the fruit waste to reduce the fruit wastage.</p>
+					<ul class="services services-page">
+						<li><a data-slug="1" href="#" >increases shelf life</a></li>
+						<li><a data-slug="2" href="#" >edible coating on fruits</a></li>
+						<li><a data-slug="3" href="#" >tasteless</a></li>
+						<li><a data-slug="4" href="#" >non-allergic</a></li>
+						<li><a data-slug="5" href="#" >odorless</a></li>
+						<li><a data-slug="6" href="#" >colorless</a></li>
+						<li><a data-slug="6" href="#" >eco-friendly</a></li>
+					</ul>
+				</div>
+			</section>
+			<section id="web_section" data-section-name="web" class="content-wrap">
+				<div class="container">
+					<h1 class="title disable-reveal">how it works
+						<div class="who-take-part">
+							<a href="#" class="radu"><span>Adithya Lab</span>
+								<blockquote class="radu">
+									<p >"The product was extracted in lab and helps in increasing shelf life of fruits. The same can be done commercially with proper machinery setup."</p>
+								</blockquote>
+							</a>
+							<a href="#" class="edouard"><span>NIT Lab</span>
+								<blockquote class="edouard">
+									<p >"The lipid extraction process can be used to increase the shelf life of fruits."</p>
+								</blockquote>
+							</a>
+							<a href="#" class="jonas"><span>NIT Andhra</span>
+								<blockquote class="jonas">
+									<p >"The process can be imporved in future for household customers."</p>
+								</blockquote>
+							</a>
+							<!-- <a href="#" class="cedric"><span>cédric</span>
+								<blockquote class="cedric">
+									<p >"The Internet is a bit like the air we breathe; it is everywhere, we don't see it and without it there is no possible life."</p>
+								</blockquote>
+							</a>
+							<a href="#" class="audrey"><span>audrey</span>
+								<blockquote class="audrey">
+									<p >"A website is the first contact with your future customer, it is your business card."</p>
+								</blockquote>
+							</a>
+							<a href="#" class="quentin"><span>quentin</span>
+								<blockquote class="quentin">
+									<p >"In the era of information, the web is so important that it has become necessary to have a website before even having a workplace.."</p>
+								</blockquote>
+							</a> -->
+						</div>
+					</h1>
+					<p class="sentence" >First, the waste fruit extracts are procured and the lipid extraction process is carried out to obtain a solution that can be applied on fruits.</br>The fruits distributors then use the product on fruits to obtain value from Fresh4Sure.
+					</p>
+					<ul class="services services-page">
+						<li><a data-slug="7" href="#"  >extracted from any fruit </a></li>
+						<li><a data-slug="8" href="#"  >dipped or sprayed</a></li>
+						<li><a data-slug="9" href="#"  >creates isolating layer</a></li>
+						<li><a data-slug="10" href="#" >oxygen doesn't enter</a></li>
+						<li><a data-slug="11" href="#" >moisture remains inside</a></li>
+						<li><a data-slug="12" href="#" >nutrients maintained</a></li>
+						<li><a data-slug="13" href="#" >wastage reduced</a></li>
+						<li><a data-slug="14" href="#" >no pre-mature harvest</a></li>
+						<li><a data-slug="15" href="#" >cheaper exports</a></li>
+						<li><a data-slug="16" href="#" >fruit waste utilized</a></li>
+						<li><a data-slug="17" href="#" >increased exports</a></li>
+					</ul>
+				</div>
+			</section>
+			<section id="marketing_section" data-section-name="marketing" class="content--end">
+				<div class="container">
+					<h1 class="title disable-reveal">But why?
+						<div class="who-take-part">
+							<a href="#" class="radu"><span>Distributors</span>
+								<blockquote class="radu">
+									<p >"My overall supply chain cost would reduce. I can export to longer distances with less wastage."</p>
+								</blockquote>
+							</a>
+							<a href="#" class="edouard"><span>Distributors</span>
+								<blockquote class="edouard">
+									<p >"Fruit wastage cost would reduce drastically."</p>
+								</blockquote>
+							</a>
+							<a href="#" class="audrey"><span>Retailers</span>
+								<blockquote class="audrey">
+									<p >"My customers would be happy with high quality products."</p>
+								</blockquote>
+							</a>
+						</div>
+					</h1>
+					<p class="sentence" >1.3 Billion tons of food is wasted per year</br>India ranks 102 in the global hunger index</br> High wastage during storage and transportation of fruits
+Fresh4Sure helps in avoiding the premature harvest of fruits and thus helps it in under-ripening as well as over-ripening.
+</p>
+					<ul class="services services-page">
+						<li><a data-slug="18" href="#" >high food wastage in India</a></li>
+						<li><a data-slug="19" href="#" >India's hunger index</a></li>
+						<li><a data-slug="20" href="#" >huge wastage cost</a></li>
+						<li><a data-slug="21" href="#" >transportation loss</a></li>
+						<li><a data-slug="22" href="#" >storage loss</a></li>
+						<li><a data-slug="23" href="#" >harmful alternatives</a></li>
+						<li><a data-slug="24" href="#" >low farmers income</a></li>
+						<li><a data-slug="25" href="#" >low farmers knowledge</a></li>
+					</ul>
+				</div>
+			</section>
+			<!-- ROTATE SCREEN ON MOBILE LANDSCAPE -->
+			<div id="rotate">
+				<span >please turn your screen</span>
+				<div class="phone">
+					<div class="picto">
+						<div class="cancel"></div>
+						<div class="checked"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="ieonly">
+			<p >This site uses technologies not compatible with Internet Explorer 8, 9, 10 and 11. Please use Edge which is the successor to Internet Explorer or any other browser.</p>
+		</div>
+
+		<script src="../../www.google.com/recaptcha/apida10.js?onload=onloadCallback" async defer></script>
+		<script>
+		var onloadCallback = function() {
+			grecaptcha.execute();
+		};
+
+		function setResponse(response) {
+			document.getElementById('captcha-response').value = response;
+		}
+		</script>
+		<script type="text/javascript" src="../../secure.leadforensics.com/js/116669.js"></script>
+		<noscript><img src="../../secure.leadforensics.com/116669.html" alt="" style="display:none;" /></noscript>
+		<script src="dist/home.min.js"></script>
+		<script src="dist/localization.min.js"></script>
+	</body>
+
+</html>
